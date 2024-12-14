@@ -1,0 +1,909 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\wasri\\Desktop\\playwrigt\\playwright.config.ts",
+    "rootDir": "C:/Users/wasri/Desktop/playwrigt/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 6
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/wasri/Desktop/playwrigt/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/wasri/Desktop/playwrigt/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/wasri/Desktop/playwrigt/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/wasri/Desktop/playwrigt/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/wasri/Desktop/playwrigt/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/wasri/Desktop/playwrigt/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.49.1",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "functionalTestCases.spec.ts",
+      "file": "functionalTestCases.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Functional Test Cases for Wiley Online Library",
+          "file": "functionalTestCases.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Verify Search Functionality",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "timedOut",
+                      "duration": 60195,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts",
+                            "column": 16,
+                            "line": 10
+                          },
+                          "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://onlinelibrary.wiley.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  8 |\u001b[39m   \u001b[90m// Test Case 1: Verify the search functionality works correctly\u001b[39m\n \u001b[90m  9 |\u001b[39m   test(\u001b[32m'Verify Search Functionality'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://onlinelibrary.wiley.com/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m \u001b[32m'input[name=\"q\"]'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts:10:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-12-14T19:06:44.635Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-chromium\\test-failed-1.png"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 7,
+                      "status": "timedOut",
+                      "duration": 63073,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Search Functionality: page.waitForSelector: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"q\"]') to be visible\u001b[22m\n\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:15:18 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@15'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m15\u001b[39m,\n      column: \u001b[33m18\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(input[name=\"q\"])'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'input[name=\"q\"]'\u001b[39m, timeout: \u001b[33m60000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203329295\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('input[name=\"q\"]') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('input[name=\"q\"]') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:15:18'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 1,
+                      "startTime": "2024-12-14T19:07:47.715Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-chromium-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-chromium-retry1\\trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 12,
+                      "status": "timedOut",
+                      "duration": 60213,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Search Functionality: page.waitForSelector: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"q\"]') to be visible\u001b[22m\n\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:15:18 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@10'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m15\u001b[39m,\n      column: \u001b[33m18\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(input[name=\"q\"])'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'input[name=\"q\"]'\u001b[39m, timeout: \u001b[33m60000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203394909\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('input[name=\"q\"]') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('input[name=\"q\"]') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:15:18'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 2,
+                      "startTime": "2024-12-14T19:08:54.496Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-chromium-retry2\\test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ffa0f61d40b99fa5e2f9-5427233f8069fcfd92ea",
+              "file": "functionalTestCases.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "Verify Login Page Accessibility",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "timedOut",
+                      "duration": 60202,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts",
+                            "column": 16,
+                            "line": 32
+                          },
+                          "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://onlinelibrary.wiley.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 30 |\u001b[39m   \u001b[90m// Test Case 2: Verify login page is accessible\u001b[39m\n \u001b[90m 31 |\u001b[39m   test(\u001b[32m'Verify Login Page Accessibility'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://onlinelibrary.wiley.com/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mconst\u001b[39m loginLink \u001b[33m=\u001b[39m \u001b[32m'a:has-text(\"Log in\")'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts:32:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-12-14T19:06:44.697Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-chromium\\test-failed-1.png"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 8,
+                      "status": "timedOut",
+                      "duration": 62906,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Login Page Accessibility: page.waitForSelector: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\u001b[22m\n\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:37:18 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@15'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m37\u001b[39m,\n      column: \u001b[33m18\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(a:has-text(\"Log in\"))'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'a:has-text(\"Log in\")'\u001b[39m, timeout: \u001b[33m60000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203329767\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:37:18'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 1,
+                      "startTime": "2024-12-14T19:07:47.659Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-chromium-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-chromium-retry1\\trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 14,
+                      "status": "timedOut",
+                      "duration": 60206,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Login Page Accessibility: page.waitForSelector: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\u001b[22m\n\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:37:18 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@10'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m37\u001b[39m,\n      column: \u001b[33m18\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(a:has-text(\"Log in\"))'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'a:has-text(\"Log in\")'\u001b[39m, timeout: \u001b[33m60000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203395038\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:37:18'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 2,
+                      "startTime": "2024-12-14T19:08:54.636Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-chromium-retry2\\test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ffa0f61d40b99fa5e2f9-54fad7be073f009308d5",
+              "file": "functionalTestCases.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "Verify Navigation to Journals Section",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "timedOut",
+                      "duration": 60214,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts",
+                            "column": 16,
+                            "line": 52
+                          },
+                          "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://onlinelibrary.wiley.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 50 |\u001b[39m   \u001b[90m// Test Case 3: Verify navigation to Journals section\u001b[39m\n \u001b[90m 51 |\u001b[39m   test(\u001b[32m'Verify Navigation to Journals Section'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://onlinelibrary.wiley.com/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m journalsLink \u001b[33m=\u001b[39m \u001b[32m'a:has-text(\"Journals\")'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts:52:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-12-14T19:06:44.810Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-f4871-igation-to-Journals-Section-chromium\\test-failed-1.png"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 9,
+                      "status": "timedOut",
+                      "duration": 63475,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Navigation to Journals Section: ExpectError: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"Journals\"\u001b[39m\nReceived string:    \u001b[31m\"onlinelibrary.wiley.com\"\u001b[39m\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:64:27 {\n  matcherResult: {\n    message: \u001b[32m'\\x1B[2mexpect(\\x1B[22m\\x1B[31mreceived\\x1B[39m\\x1B[2m).\\x1B[22mtoContain\\x1B[2m(\\x1B[22m\\x1B[32mexpected\\x1B[39m\\x1B[2m) // indexOf\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m'\\n'\u001b[39m +\n      \u001b[32m'Expected substring: \\x1B[32m\"Journals\"\\x1B[39m\\n'\u001b[39m +\n      \u001b[32m'Received string:    \\x1B[31m\"onlinelibrary.wiley.com\"\\x1B[39m'\u001b[39m,\n    pass: \u001b[33mfalse\u001b[39m\n  },\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'expect@19'\u001b[39m,\n    category: \u001b[32m'expect'\u001b[39m,\n    title: \u001b[32m'expect.toContain'\u001b[39m,\n    params: { expected: \u001b[32m'Journals'\u001b[39m },\n    infectParentStepsWithError: \u001b[90mundefined\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m64\u001b[39m,\n      column: \u001b[33m27\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203328571\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: \\x1B[2mexpect(\\x1B[22m\\x1B[31mreceived\\x1B[39m\\x1B[2m).\\x1B[22mtoContain\\x1B[2m(\\x1B[22m\\x1B[32mexpected\\x1B[39m\\x1B[2m) // indexOf\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'Expected substring: \\x1B[32m\"Journals\"\\x1B[39m\\n'\u001b[39m +\n        \u001b[32m'Received string:    \\x1B[31m\"onlinelibrary.wiley.com\"\\x1B[39m'\u001b[39m,\n      stack: \u001b[32m'Error: \\x1B[2mexpect(\\x1B[22m\\x1B[31mreceived\\x1B[39m\\x1B[2m).\\x1B[22mtoContain\\x1B[2m(\\x1B[22m\\x1B[32mexpected\\x1B[39m\\x1B[2m) // indexOf\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'Expected substring: \\x1B[32m\"Journals\"\\x1B[39m\\n'\u001b[39m +\n        \u001b[32m'Received string:    \\x1B[31m\"onlinelibrary.wiley.com\"\\x1B[39m\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:64:27'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m,\n      matcherResult: \u001b[36m[Object]\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 1,
+                      "startTime": "2024-12-14T19:07:47.776Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-f4871-igation-to-Journals-Section-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-f4871-igation-to-Journals-Section-chromium-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-f4871-igation-to-Journals-Section-chromium-retry1\\trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 13,
+                      "status": "passed",
+                      "duration": 36210,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Navigation to Journals Section: ExpectError: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"Journals\"\u001b[39m\nReceived string:    \u001b[31m\"onlinelibrary.wiley.com\"\u001b[39m\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:64:27 {\n  matcherResult: {\n    message: \u001b[32m'\\x1B[2mexpect(\\x1B[22m\\x1B[31mreceived\\x1B[39m\\x1B[2m).\\x1B[22mtoContain\\x1B[2m(\\x1B[22m\\x1B[32mexpected\\x1B[39m\\x1B[2m) // indexOf\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m'\\n'\u001b[39m +\n      \u001b[32m'Expected substring: \\x1B[32m\"Journals\"\\x1B[39m\\n'\u001b[39m +\n      \u001b[32m'Received string:    \\x1B[31m\"onlinelibrary.wiley.com\"\\x1B[39m'\u001b[39m,\n    pass: \u001b[33mfalse\u001b[39m\n  },\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'expect@14'\u001b[39m,\n    category: \u001b[32m'expect'\u001b[39m,\n    title: \u001b[32m'expect.toContain'\u001b[39m,\n    params: { expected: \u001b[32m'Journals'\u001b[39m },\n    infectParentStepsWithError: \u001b[90mundefined\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m64\u001b[39m,\n      column: \u001b[33m27\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203370656\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: \\x1B[2mexpect(\\x1B[22m\\x1B[31mreceived\\x1B[39m\\x1B[2m).\\x1B[22mtoContain\\x1B[2m(\\x1B[22m\\x1B[32mexpected\\x1B[39m\\x1B[2m) // indexOf\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'Expected substring: \\x1B[32m\"Journals\"\\x1B[39m\\n'\u001b[39m +\n        \u001b[32m'Received string:    \\x1B[31m\"onlinelibrary.wiley.com\"\\x1B[39m'\u001b[39m,\n      stack: \u001b[32m'Error: \\x1B[2mexpect(\\x1B[22m\\x1B[31mreceived\\x1B[39m\\x1B[2m).\\x1B[22mtoContain\\x1B[2m(\\x1B[22m\\x1B[32mexpected\\x1B[39m\\x1B[2m) // indexOf\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'Expected substring: \\x1B[32m\"Journals\"\\x1B[39m\\n'\u001b[39m +\n        \u001b[32m'Received string:    \\x1B[31m\"onlinelibrary.wiley.com\"\\x1B[39m\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:64:27'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m,\n      matcherResult: \u001b[36m[Object]\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 2,
+                      "startTime": "2024-12-14T19:08:54.423Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "ffa0f61d40b99fa5e2f9-844b6891db1516d2e7d9",
+              "file": "functionalTestCases.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "Verify Search Functionality",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "timedOut",
+                      "duration": 62164,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts",
+                            "column": 16,
+                            "line": 10
+                          },
+                          "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://onlinelibrary.wiley.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  8 |\u001b[39m   \u001b[90m// Test Case 1: Verify the search functionality works correctly\u001b[39m\n \u001b[90m  9 |\u001b[39m   test(\u001b[32m'Verify Search Functionality'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://onlinelibrary.wiley.com/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m \u001b[32m'input[name=\"q\"]'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts:10:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-12-14T19:06:44.741Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-firefox\\test-failed-1.png"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 11,
+                      "status": "timedOut",
+                      "duration": 62082,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Search Functionality: page.waitForSelector: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"q\"]') to be visible\u001b[22m\n\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:15:18 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@10'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m15\u001b[39m,\n      column: \u001b[33m18\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(input[name=\"q\"])'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'input[name=\"q\"]'\u001b[39m, timeout: \u001b[33m60000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203333569\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('input[name=\"q\"]') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('input[name=\"q\"]') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:15:18'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 1,
+                      "startTime": "2024-12-14T19:07:50.849Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-firefox-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-firefox-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-firefox-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ffa0f61d40b99fa5e2f9-00aa4e108e650bbfb7ff",
+              "file": "functionalTestCases.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "Verify Login Page Accessibility",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "timedOut",
+                      "duration": 60206,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts",
+                            "column": 16,
+                            "line": 32
+                          },
+                          "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://onlinelibrary.wiley.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 30 |\u001b[39m   \u001b[90m// Test Case 2: Verify login page is accessible\u001b[39m\n \u001b[90m 31 |\u001b[39m   test(\u001b[32m'Verify Login Page Accessibility'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://onlinelibrary.wiley.com/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m     \u001b[36mconst\u001b[39m loginLink \u001b[33m=\u001b[39m \u001b[32m'a:has-text(\"Log in\")'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts:32:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-12-14T19:06:44.674Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-firefox\\test-failed-1.png"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 6,
+                      "status": "timedOut",
+                      "duration": 63421,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Login Page Accessibility: page.waitForSelector: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\u001b[22m\n\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:37:18 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@10'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m37\u001b[39m,\n      column: \u001b[33m18\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(a:has-text(\"Log in\"))'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'a:has-text(\"Log in\")'\u001b[39m, timeout: \u001b[33m60000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203332024\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\\x1B[22m\\n`\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:37:18'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 1,
+                      "startTime": "2024-12-14T19:07:47.610Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-firefox-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-firefox-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-firefox-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ffa0f61d40b99fa5e2f9-06a69ffb771e1a8eac62",
+              "file": "functionalTestCases.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "Verify Navigation to Journals Section",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "timedOut",
+                      "duration": 60499,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts",
+                            "column": 16,
+                            "line": 52
+                          },
+                          "message": "Error: page.goto: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://onlinelibrary.wiley.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 50 |\u001b[39m   \u001b[90m// Test Case 3: Verify navigation to Journals section\u001b[39m\n \u001b[90m 51 |\u001b[39m   test(\u001b[32m'Verify Navigation to Journals Section'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 52 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://onlinelibrary.wiley.com/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m journalsLink \u001b[33m=\u001b[39m \u001b[32m'a:has-text(\"Journals\")'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts:52:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-12-14T19:06:44.779Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-f4871-igation-to-Journals-Section-firefox\\test-failed-1.png"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 10,
+                      "status": "timedOut",
+                      "duration": 62842,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts",
+                            "column": 16,
+                            "line": 53
+                          },
+                          "message": "Error: page.waitForLoadState: Test timeout of 60000ms exceeded.\n\n\u001b[0m \u001b[90m 51 |\u001b[39m   test(\u001b[32m'Verify Navigation to Journals Section'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 52 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://onlinelibrary.wiley.com/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m journalsLink \u001b[33m=\u001b[39m \u001b[32m'a:has-text(\"Journals\")'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m     \u001b[36mtry\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\wasri\\Desktop\\playwrigt\\tests\\functionalTestCases.spec.ts:53:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2024-12-14T19:07:49.094Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-f4871-igation-to-Journals-Section-firefox-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-f4871-igation-to-Journals-Section-firefox-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-f4871-igation-to-Journals-Section-firefox-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ffa0f61d40b99fa5e2f9-055066e7e272f87efcb2",
+              "file": "functionalTestCases.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "Verify Search Functionality",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "status": "timedOut",
+                      "duration": 60126,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Search Functionality: page.waitForSelector: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"q\"]') to be visible\u001b[22m\n\u001b[2m    - waiting for navigation to finish...\u001b[22m\n\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:15:18 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@10'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m15\u001b[39m,\n      column: \u001b[33m18\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(input[name=\"q\"])'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'input[name=\"q\"]'\u001b[39m, timeout: \u001b[33m60000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203396679\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('input[name=\"q\"]') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\x1B[2m    - waiting for navigation to finish...\\x1B[22m\\n'\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('input[name=\"q\"]') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\x1B[2m    - waiting for navigation to finish...\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:15:18'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2024-12-14T19:08:56.475Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-96c31-Verify-Search-Functionality-webkit\\test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ffa0f61d40b99fa5e2f9-0f4b0f3da90234257f02",
+              "file": "functionalTestCases.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "Verify Login Page Accessibility",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "status": "timedOut",
+                      "duration": 60118,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Login Page Accessibility: page.waitForSelector: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\u001b[22m\n\u001b[2m    - waiting for navigation to finish...\u001b[22m\n\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:37:18 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@10'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m37\u001b[39m,\n      column: \u001b[33m18\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(a:has-text(\"Log in\"))'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'a:has-text(\"Log in\")'\u001b[39m, timeout: \u001b[33m60000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203396943\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\x1B[2m    - waiting for navigation to finish...\\x1B[22m\\n'\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Log in\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\x1B[2m    - waiting for navigation to finish...\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:37:18'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2024-12-14T19:08:56.760Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-b9996-fy-Login-Page-Accessibility-webkit\\test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ffa0f61d40b99fa5e2f9-cdc08133b84dd2fea7af",
+              "file": "functionalTestCases.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "Verify Navigation to Journals Section",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "status": "timedOut",
+                      "duration": 60124,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "Error in Verify Navigation to Journals Section: page.waitForSelector: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a:has-text(\"Journals\")') to be visible\u001b[22m\n\u001b[2m    - waiting for navigation to finish...\u001b[22m\n\n    at \u001b[90mC:\\Users\\wasri\\Desktop\\playwrigt\\\u001b[39mtests\\functionalTestCases.spec.ts:57:18 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@10'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts'\u001b[39m,\n      line: \u001b[33m57\u001b[39m,\n      column: \u001b[33m18\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'page.waitForSelector(a:has-text(\"Journals\"))'\u001b[39m,\n    apiName: \u001b[32m'page.waitForSelector'\u001b[39m,\n    params: { selector: \u001b[32m'a:has-text(\"Journals\")'\u001b[39m, timeout: \u001b[33m60000\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1734203397098\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Journals\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\x1B[2m    - waiting for navigation to finish...\\x1B[22m\\n'\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForSelector: Test timeout of 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m`\\x1B[2m  - waiting for locator('a:has-text(\"Journals\")') to be visible\\x1B[22m\\n`\u001b[39m +\n        \u001b[32m'\\x1B[2m    - waiting for navigation to finish...\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\wasri\\\\Desktop\\\\playwrigt\\\\tests\\\\functionalTestCases.spec.ts:57:18'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2024-12-14T19:08:56.913Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\wasri\\Desktop\\playwrigt\\test-results\\functionalTestCases-Functi-f4871-igation-to-Journals-Section-webkit\\test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ffa0f61d40b99fa5e2f9-a97e86ff45ee23468172",
+              "file": "functionalTestCases.spec.ts",
+              "line": 51,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-12-14T19:06:43.922Z",
+    "duration": 193221.211,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 1
+  }
+}
